@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Serif Text", serif;
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+    display: grid;
+}
+
+.login-box {
+    position: relative;
+    left: 35%;
+    top: 40%;
+    height: 100%;
+    width: 30%;
+    font-size: 13px;
+    border-radius: 15px;
+    border: 15px solid #000;
+    padding: 5% 5% 5% 5%;
+    text-align: left;
+    display: block;
+}
+
+button {
+    position: absolute;
+    background-color: transparent;
+    border-color: darkgreen darkgreen;
+
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+button:active {
+    background-color: greenyellow;
+}
+
+h1 {
+    text-align: center;
+    line-height: 200%;
+}
+
+#username {
+    height: auto;
+    width: 100%;
+}
+
+#password {
+    height: auto;
+    width: 100%;
+}
