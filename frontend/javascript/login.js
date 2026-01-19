@@ -36,14 +36,14 @@ my_form.addEventListener("submit", async (e) => {
     await hashString(loginAttempt.password).then(hash => loginAttempt.password = hash);
 
     console.log(JSON.stringify(loginAttempt));
-    
-    fetch((serverApi+"/login"),
-        {
-        method: 'GET',
-            body: JSON.stringify (loginAttempt)
-        })
-    .then(response => response.json())
-    .then(data => {})
+
+    // fetch((serverApi+"/login"),
+    //     {
+    //     method: 'GET',
+    //         body: JSON.stringify (loginAttempt)
+    //     })
+    // .then(response => response.json())
+    // .then(data => {})
 
 
 })
