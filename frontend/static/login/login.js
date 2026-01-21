@@ -8,7 +8,7 @@ const serverApi = "http://localhost:4000";
 let my_form = document.getElementById("login_form");
 
 const things = document.getElementsByTagName("form");
-
+const register = document.getElementById("register");
 // console.log(JSON.stringify(my_form));
 // console.log(things);
 
@@ -24,6 +24,11 @@ async function hashString(message) {
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
 }
+
+register.addEventListener("click",  (event) => {
+    event.preventDefault();
+    window.location.replace("/register");
+})
 
 my_form.addEventListener("submit", async (e) => {
 

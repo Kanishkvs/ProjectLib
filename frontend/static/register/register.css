@@ -5,8 +5,13 @@
     margin: 0;
     padding: 0;
     font-family: "DM Serif Text", serif;
+    color: white;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: underline;
+}
 /* ===== Background ===== */
 .container {
     min-height: 100vh;
@@ -99,6 +104,10 @@ button:active {
     transform: scale(0.97);
 }
 
+a:hover {
+    color: #8b7cff;
+}
+
 /* ===== Animation ===== */
 @keyframes floatIn {
     from {
@@ -110,3 +119,4 @@ button:active {
         transform: translateY(0);
     }
 }
+
