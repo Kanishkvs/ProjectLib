@@ -52,3 +52,15 @@ my_form.addEventListener("submit", async (e) => {
 
 
 })
+
+const loginPage = document.getElementById("login");
+loginPage.addEventListener("click", async (e) => {
+    e.preventDefault();
+    window.location.reload();
+})
+
+const home = document.getElementById("left-center-button");
+home.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.replace("/");
+})

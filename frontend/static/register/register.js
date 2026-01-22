@@ -13,13 +13,29 @@ async function hashString(message) {
     return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
 }
 
+const goToLogin = (e) => {
+    e.preventDefault();
+    console.log("login attempted");
+    window.location.replace("/login");
+}
+
 myform.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("Submitted");
 })
 
 login.addEventListener("click", (e) => {
+    goToLogin(e)
+})
+
+const loginPage = document.getElementById("loginPage");
+
+loginPage.addEventListener("click", (e) => {
+    goToLogin(e)
+})
+
+const home = document.getElementById("left-center-button");
+home.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("login attempted");
-    window.location.replace("/login");
+    window.location.replace("/");
 })

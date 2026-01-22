@@ -6,6 +6,83 @@
     font-family: "DM Serif Text", serif;
 }
 
+body {
+    background: radial-gradient(circle at top, #1f1f2e, #0b0b12);
+}
+
+.main-top {
+    position: sticky;
+    top: 0;
+    height: 70px;
+    margin: 15px;
+    padding: 0 40px;
+    background: rgba(25, 25, 35, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.8),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+
+#top-left {
+    position: absolute;
+    left: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(138, 99, 255, 0.5);
+}
+
+/* ===== Navigation Buttons ===== */
+
+.center-button {
+    height: 42px;
+    width: 120px;
+    margin: 0 12px;
+    font-size: 15px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #2a2a3a;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.center-button:hover {
+    background: linear-gradient(135deg, #7a6cff, #b36cff);
+    box-shadow: 0 0 20px rgba(140, 108, 255, 0.6);
+}
+
+/* preserve positioning */
+#left-center-button { left: 38%; position: absolute; }
+#center-center-button { left: 46%; position: absolute; }
+#right-center-button { left: 54%; position: absolute; }
+
+/* ===== Login Button ===== */
+
+.main-login-button {
+    position: absolute;
+    right: 30px;
+    height: 44px;
+    width: 110px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #7a6cff, #b36cff);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.main-login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(140, 108, 255, 0.55);
+}
+
+
 /* ===== Background ===== */
 .container {
     min-height: 100vh;
