@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import List
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
-
+from fastapi.staticfiles import StaticFiles
 
 DATABASE_URL = "sqlite:///./library.db"
 
@@ -111,3 +111,5 @@ def get_books():
     books = db.query(BookDB).all()
 
     return books
+
+app.mount("/", StaticFiles(directory="frontend/static", html=True), name="static")
