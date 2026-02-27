@@ -56,7 +56,7 @@ app = FastAPI()
 
 
 
-@app.post("/register")
+@app.post("/api/register")
 def register(user: User):
     db = SessionLocal()
 
@@ -71,7 +71,7 @@ def register(user: User):
     return {"message": "User registered successfully"}
 
 
-@app.get("/login")
+@app.get("/api/login")
 def login(username: str, password: str):
     db = SessionLocal()
 
@@ -82,7 +82,7 @@ def login(username: str, password: str):
     return {"message": "Login successful"}
 
 
-@app.post("/books")
+@app.post("/api/books")
 def add_book(book: Book):
     db = SessionLocal()
 
@@ -105,7 +105,7 @@ def add_book(book: Book):
     return {"message": "Book added successfully"}
 
 
-@app.get("/books")
+@app.get("/api/books")
 def get_books():
     db = SessionLocal()
     books = db.query(BookDB).all()
